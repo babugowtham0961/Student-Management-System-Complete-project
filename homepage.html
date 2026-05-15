@@ -1,0 +1,278 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduConnect Dashboard</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f3f5f9;
+      padding:20px;
+    }
+
+    /* HEADER */
+    .navbar{
+      background:linear-gradient(to right,#0052d4,#0066ff);
+      color:white;
+      padding:18px 30px;
+      border-radius:20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:30px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .logo img{
+      width:50px;
+      height:50px;
+      border-radius:10px;
+    }
+
+    .logo h1{
+      font-size:32px;
+    }
+
+    .logo p{
+      font-size:14px;
+    }
+
+    .profile{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .profile img{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:white;
+    }
+
+    /* CARD SECTION */
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:25px;
+      padding:35px 25px;
+      text-align:center;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card img{
+      width:120px;
+      margin-bottom:20px;
+    }
+
+    .card h2{
+      font-size:36px;
+      margin-bottom:15px;
+      color:#111827;
+    }
+
+    .card p{
+      color:#5b6475;
+      line-height:1.6;
+      margin-bottom:25px;
+      font-size:20px;
+    }
+
+    .btn{
+      border:none;
+      padding:15px 30px;
+      border-radius:12px;
+      font-size:20px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      opacity:0.9;
+    }
+
+    .blue{
+      background:#e8f0ff;
+      color:#0052d4;
+    }
+
+    .purple{
+      background:#f1e8ff;
+      color:#7b2ff7;
+    }
+
+    .green{
+      background:#e4f8ed;
+      color:#17a34a;
+    }
+
+    .yellow{
+      background:#fff7da;
+      color:#c58a00;
+    }
+
+    .sky{
+      background:#e7f3ff;
+      color:#0066ff;
+    }
+
+    .cyan{
+      background:#e3fbfb;
+      color:#0097a7;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="">
+      <div>
+        <h1>EduConnect</h1>
+        <p>Learn. Grow. Succeed.</p>
+      </div>
+    </div>
+
+    <div class="profile">
+      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="">
+      <h2>Welcome, Parent</h2>
+    </div>
+
+  </div>
+
+  <!-- CARDS -->
+  <div class="card-container">
+
+    <!-- Schedule -->
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/8074/8074788.png" alt="">
+      <h2>School Event Schedule Page</h2>
+      <p>View upcoming school events and important dates.</p>
+
+      <button class="btn blue"
+        onclick="goToPage('schedule.html')">
+        View Schedule
+      </button>
+    </div>
+
+    <!-- Meetings -->
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="">
+      <h2>Parent Teacher Meeting Date</h2>
+      <p>Check and schedule your parent teacher meetings.</p>
+
+      <button class="btn purple"
+        onclick="goToPage('meetings.html')">
+        View Meetings
+      </button>
+    </div>
+
+    <!-- Sports -->
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3176/3176292.png" alt="">
+      <h2>Sports Event</h2>
+      <p>Stay updated with sports events and activities.</p>
+
+      <button class="btn green"
+        onclick="goToPage('sports.html')">
+        View Events
+      </button>
+    </div>
+
+    <!-- Performance -->
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
+      <h2>Student Performance</h2>
+      <p>Track academic progress and performance.</p>
+
+      <button class="btn yellow"
+        onclick="goToPage('performance.html')">
+        View Performance
+      </button>
+    </div>
+
+    <!-- Assessment -->
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3976/3976626.png" alt="">
+      <h2>Assessment for the Student</h2>
+      <p>View assessments, grades and feedback.</p>
+
+      <button class="btn sky"
+        onclick="goToPage('assessment.html')">
+        View Assessments
+      </button>
+    </div>
+
+    <!-- AI Chat -->
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="">
+      <h2>Chat with AI</h2>
+      <p>Get answers and help anytime with AI.</p>
+
+      <button class="btn cyan"
+        onclick="goToPage('chat.html')">
+        Start Chat
+      </button>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="">
+      <h2>Chat with AI</h2>
+      <p>Get answers and help anytime with AI.</p>
+
+      <button class="btn cyan"
+        onclick="goToPage('Attance.html')">
+        Mark The Attance For THe STudent
+      </button>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="">
+      <h2>Chat with AI</h2>
+      <p>Get answers and help anytime with AI.</p>
+
+      <button class="btn cyan"
+        onclick="goToPage('Exam Result.html')">
+        Mark The Attance For THe STudent
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    function goToPage(page){
+      window.location.href = page;
+    }
+  </script>
+
+</body>
+</html>
